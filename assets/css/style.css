@@ -1,0 +1,32 @@
+body{
+    background-color: rgb(66, 66, 66);
+   
+}
+
+.barred {
+    text-decoration: line-through;
+}
+h1 {
+    font-size: 80px;
+}
+h2 {
+    font-size: 60px;
+}
+p{
+    font-size: 30px;
+}
+
+i:hover {
+    cursor: pointer;
+}
+input,
+button {
+    border-radius: 0.5rem;
+}
+
+img {
+    height: 40%;
+    position: absolute;
+    top:0;
+    right: 5vw;
+}
