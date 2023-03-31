@@ -174,6 +174,14 @@ createApp({
       console.log(index);
       this.activeContact = index;
       console.log("contatto attivo:", this.activeContact);
+    },
+    getLastMessage(messages) {
+      const lastMessageIndex = messages.length - 1;
+      return messages[lastMessageIndex].message
+    },
+    getDate(messages){
+      const dateIndex = messages.length -1;
+      return messages[dateIndex].date;
     }
   },
 }).mount("#app");

@@ -58,7 +58,7 @@
                   <img :src="contact.avatar" alt="contact.name">
                   <span class="ms-2">
                     <h4>{{contact.name}}</h4>
-                    <p>{{contact.messages[contact.messages.length-1].message}}</p>
+                    <p>{{getLastMessage(contact.messages)}}</p>
                   </span>
                 </div>
               </li>
@@ -73,7 +73,7 @@
             <div v-if="activeContact !== -1" class="d-flex align-items-center">
               <img :src="contacts[activeContact].avatar" alt="">
               <h3 class="ms-2">{{contacts[activeContact].name}}</h3>
-              <p>{{contacts[activeContact].messages.date}}</p> 
+              <p>{{getDate(contacts[activeContact].messages)}}</p> 
               <!--^^^ PROBLEMA ^^^-->
             </div>
             <h4 v-else class="d-flex align-items-center">
