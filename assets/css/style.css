@@ -2,6 +2,11 @@ body{
     height: 100vh;
     background: linear-gradient(to bottom, #009688 20%, #dddbd1 20%, #d2dbdc 100%);
 }
+
+p {
+    margin-bottom: 0;
+  }
+
 .my_wrapper{
     height: 100vh;
     width: 100vw;
@@ -34,6 +39,34 @@ img {
     cursor: pointer;
 }
 
-.leftApp {
+.leftApp .header {
     border-right: 2px solid rgb(166, 166, 166);
+}
+
+.banner {
+    height: 100px;
+    background-color: #8edafc;
+}
+
+#bellCover {
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    padding: 5px;
+    width: 50px;
+    height: 50px;
+}
+
+#bellCover i {
+    font-size: 30px;
+    color: #8edafc;
+}
+
+#bellOption {
+    color: grey;
+    text-decoration: underline;
+}
+#bellOption:hover {
+    color: grey;
+    text-decoration: underline;
+    cursor: pointer;
 }
