@@ -3,6 +3,7 @@ const { createApp } = Vue;
 createApp({
   data() {
     return {
+      activeContact: -1,
       contacts: [
         {
           name: "Michele",
@@ -168,6 +169,12 @@ createApp({
       ],
     };
   },
-  methods: {},
+  methods: {
+    setActiveContact(index){
+      console.log(index);
+      this.activeContact = index;
+      console.log("contatto attivo:", this.activeContact);
+    }
+  },
 }).mount("#app");
 
