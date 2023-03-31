@@ -1,32 +1,4 @@
 body{
-    background-color: rgb(66, 66, 66);
-   
+    background-color: linear-gradient(to top, #009688 20%, #dddbd1 20%, #d2dbdc 100%);
 }
 
-.barred {
-    text-decoration: line-through;
-}
-h1 {
-    font-size: 80px;
-}
-h2 {
-    font-size: 60px;
-}
-p{
-    font-size: 30px;
-}
-
-i:hover {
-    cursor: pointer;
-}
-input,
-button {
-    border-radius: 0.5rem;
-}
-
-img {
-    height: 40%;
-    position: absolute;
-    top:0;
-    right: 5vw;
-}
