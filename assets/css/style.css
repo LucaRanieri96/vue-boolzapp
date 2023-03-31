@@ -70,3 +70,7 @@ img {
     text-decoration: underline;
     cursor: pointer;
 }
+
+.bg_grey {
+    background-color: #f2f2f2;
+}
