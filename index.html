@@ -24,7 +24,7 @@
           <div class="header p-2 d-flex justify-content-between">
             <div>
               <img src="./assets/img/avatar_io.jpg" alt="">
-              <span class="ms-2">Luca Ranieri</span>
+              <span class="ms-2">My account</span>
             </div>
             <div class="d-flex align-items-center gap-4 me-4">
               <i class="fa-solid fa-circle-notch"></i>
@@ -53,12 +53,12 @@
           <div class="chats">
             <!-- CHAT -->
             <ul>
-              <li>
+              <li v-for="(contact, index) in contacts">
                 <div class="chat p-2 d-flex align-items-center">
-                  <img src="./assets/img/avatar_1.jpg" alt="">
+                  <img src="contact.avatar" alt="contact.name">
                   <span class="ms-2">
-                    <div>Nome</div>
-                    <div>Ultimo messaggio inviato</div>
+                    <h4>{{contact.name}}</h4>
+                    <p>{{contact.messages[contact.messages.length-1].message}}</p>
                   </span>
                 </div>
               </li>
