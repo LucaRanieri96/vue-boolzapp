@@ -110,6 +110,7 @@ img {
 .rightApp .conversation {
     height: calc(100% - 170px);
     overflow-y: scroll;
+    background-image: url("../img/mine.jpg");
 }
 
 .rightApp .typebar {
