@@ -13,8 +13,8 @@ body{
     background-color: white;
     box-shadow: 0 0 10px rgb(51, 51, 51);
 }
-#header {
-    height: 100px;
+.header {
+    height: 80px;
     background-color: #ededed;
 }
 
@@ -23,13 +23,17 @@ img {
     height: 90%;
 }
 
-#header i {
-    font-size: 30px;
+.header i {
+    font-size: 26px;
     color: grey;
 }
 
-#header i:hover {
+.header i:hover {
     font-size: 32px;
     color: rgb(68, 68, 68);
     cursor: pointer;
+}
+
+.leftApp {
+    border-right: 2px solid rgb(166, 166, 166);
 }
