@@ -128,3 +128,19 @@ img {
     font-size: 25px;
     color: rgb(130, 130, 130);
 }
+
+.sent {
+    background-color: rgba(187, 254, 170, 0.904);
+    border-radius: 4px;
+    padding: 1rem;
+    margin-top: 2rem;
+    margin-right: 2rem;
+}
+
+.received {
+    background-color: rgba(255, 255, 255, 0.904);
+    border-radius: 4px;
+    padding: 1rem;
+    margin-top: 2rem;
+    margin-left: 2rem;
+}
