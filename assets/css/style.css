@@ -7,9 +7,8 @@ body{
     width: 100vw;
 }
 
-.debug .container,
-.debug .col-4,
-.debug .col-8{
-    border: 1px dashed;
-    height: 1000px;
+.my_container {
+    width: 90vw;
+    height: 90vh;
+    background-color: white;
 }
