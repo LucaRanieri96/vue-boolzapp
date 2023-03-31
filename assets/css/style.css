@@ -3,27 +3,28 @@ body{
     background: linear-gradient(to bottom, #009688 20%, #dddbd1 20%, #d2dbdc 100%);
 }
 
+.rightApp,
+.leftApp {
+    min-height: 100%;
+    position: relative;
+}
 
 p {
     margin-bottom: 0;
 }
 
 .my_wrapper{
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
 }
 
 .my_container {
-    width: 90vw;
-    height: 90vh;
+    width: 90%;
+    height: 90%;
     background-color: white;
     box-shadow: 0 0 10px rgb(51, 51, 51);
 }
 
-.leftApp,
-.rightApp{
-    height: 100%;
-}
 
 .header {
     height: 80px;
@@ -80,9 +81,14 @@ img {
 
 .bg_grey {
     background-color: #f2f2f2;
+    height: 45px;
 }
+.row {
+    height: 100%;
+}
+
 .chats{
-    height: 960px;
+    height: calc(100% - 225px);
     overflow-y: scroll;
 }
 
@@ -96,16 +102,21 @@ img {
     background-color: rgb(218, 218, 218);
 }
 
+
 .rightApp .header {
     position: sticky;
     top: 0;
 }
+.rightApp .conversation {
+    height: calc(100% - 170px);
+    overflow-y: scroll;
+}
 
-.typebar {
-    position: sticky;
-    bottom: 0;
+.rightApp .typebar {
+    height: 90px;
     background-color: #f3eeea;
 }
+
 .typebar input {
     height: 50px;
 }
