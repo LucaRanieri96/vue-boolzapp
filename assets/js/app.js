@@ -122,7 +122,7 @@ createApp({
             },
             {
               date: "10/01/2020 15:51:00",
-              message: "Nessuna nuova, buona nuova",
+              message: "Peccato, aspettiamo dai, sarà questione di ore ormai :D",
               status: "sent",
             },
           ],

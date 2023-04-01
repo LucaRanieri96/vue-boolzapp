@@ -69,12 +69,11 @@
         <div class="rightApp col-8 ps-0">
           <!-- HEADER -->
           <div class="header p-2 d-flex justify-content-between">
-            
+
             <div v-if="activeContact !== -1" class="d-flex align-items-center">
               <img :src="contacts[activeContact].avatar" alt="">
               <h3 class="ms-2">{{contacts[activeContact].name}}</h3>
-              <p>{{getDate(contacts[activeContact].messages)}}</p> 
-              <!--^^^ PROBLEMA ^^^-->
+              <p class="ms-2">{{getDate(contacts[activeContact].messages)}}</p>
             </div>
             <h4 v-else class="d-flex align-items-center">
               <div>Apri una conversazione</div>
@@ -88,16 +87,15 @@
           </div>
           <!-- CONVERSATION -->
           <div v-if="activeContact !== -1" class="conversation">
-            <div class="d-flex justify-content-end">
-              <div class="sent">messaggi inviati</div>
-            </div>
-            <div class="d-flex">
-              <div class="received">messaggi ricevuti</div>
+
+            <div v-for="message in contacts[activeContact].messages">
+              <div v-if="message.status === 'sent'" :class="{ 'sent': message.status === 'sent'}" class="my-3">{{message.message}}
+              </div>
+              <div v-else :class="{ 'received': message.status === 'received'}"  class="my-3">{{message.message}}</div>
             </div>
           </div>
-          <div v-else class="conversation">
-            
-          </div>
+          <div v-else class="conversation"></div>
+
           <!-- TYPEBAR -->
           <div class="typebar py-2">
             <div class="row align-items-center justify-content-around">
