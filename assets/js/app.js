@@ -4,6 +4,7 @@ createApp({
   data() {
     return {
       activeContact: -1,
+      activeMessage: -1,
       search: "",
       active: false,
       contacts: [
@@ -206,12 +207,10 @@ createApp({
 
     },
     toggle(index) {
-      //this.active = !this.active
       console.log(index);
+      this.activeMessage = index;
+      console.log(this.activeMessage);
     },
-    // deleteMessage(){
-
-    // }
 
   },
 }).mount("#app");

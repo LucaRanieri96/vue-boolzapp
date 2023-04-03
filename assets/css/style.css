@@ -159,6 +159,10 @@ img {
     position: relative;
 }
 
+.hide {
+    display: none;
+}
+
 .dropdown {
     position: absolute;
     z-index: 2;
@@ -169,5 +173,7 @@ img {
 
 .delete:hover {
     cursor: pointer;
+    font-weight: 600;
 }
+
 

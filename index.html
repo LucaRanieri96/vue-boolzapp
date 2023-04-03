@@ -53,7 +53,9 @@
           <div class="chats">
             <!-- CHAT -->
             <ul>
-              <li v-for="(contact, index) in contacts" @click="setActiveContact(index)" v-show="contact.name.toLowerCase().includes(search)" :class="(activeContact === index) ? 'active' : '' ">
+              <li v-for="(contact, index) in contacts" @click="setActiveContact(index)"
+                v-show="contact.name.toLowerCase().includes(search)"
+                :class="(activeContact === index) ? 'active' : '' ">
                 <div class="chat p-2 d-flex align-items-center">
                   <img :src="contact.avatar" alt="contact.name">
                   <span class="ms-2">
@@ -90,12 +92,13 @@
 
             <div v-for="(message, index) in contacts[activeContact].messages">
               <div :class="message.status" class="my-3 d-flex justify-content-between">
-               <div>{{message.message}}</div>
-               <i class="fa-solid fa-chevron-down ms-2 drop" @click="toggle(index)"></i>
-                  <div v-if="active">
-                    <div class="dropdown"></div>
-                    <div class="delete" @click="deleteMessage">delete</div>
+                <div>{{message.message}}</div>
+                <i class="fa-solid fa-chevron-down ms-2 drop" @click="toggle(index)"></i>
+                <div>
+                  <div class="dropdown card" :class="(activeMessage === index) ? '' : 'hide' ">
+                    <div class="delete">delete</div>
                   </div>
+                </div>
               </div>
             </div>
           </div>
@@ -109,7 +112,8 @@
               </div>
               <div class="col-10">
                 <div class="input-group p-1">
-                  <input type="text" class="form-control" placeholder="Scrivi il tuo messaggio" @keyup.enter="sendMessage" ref="messageInput">
+                  <input type="text" class="form-control" placeholder="Scrivi il tuo messaggio"
+                    @keyup.enter="sendMessage" ref="messageInput">
                 </div>
               </div>
               <div class="col-1 text-center">
