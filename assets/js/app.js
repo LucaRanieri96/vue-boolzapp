@@ -188,12 +188,18 @@ createApp({
       const messageText = this.$refs.messageInput.value;
 
       this.contacts[this.activeContact].messages.push({
-        date: new Date(),
         message: messageText,
         status: "sent"
       });
 
+      this.contacts[this.activeContact].messages.push({
+        date: Date(),
+        message: "Ok",
+        status: "received"
+      });
+
       this.$refs.messageInput.value = "";
+
     },
   },
 }).mount("#app");

@@ -113,6 +113,7 @@ img {
     top: 0;
 }
 .rightApp .conversation {
+    max-width: 100%;
     height: calc(90vh - 155px);
     overflow-y: scroll;
     background-image: url("../img/mine.jpg");
@@ -139,13 +140,13 @@ img {
 .sent {
     background-color: rgba(187, 254, 170, 0.904);
     width: fit-content;
-    margin-left: 80%;
+    margin-left: 50%;
     margin-right: 2rem;
     float: right;
 }
 .received {
     background-color: rgba(255, 255, 255, 0.904);
-    margin-right: 80%;
+    margin-right: 50%;
     width: fit-content;
     margin-left: 2rem;
     display: inline-block;
