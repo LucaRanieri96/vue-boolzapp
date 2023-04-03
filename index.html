@@ -86,7 +86,7 @@
             </div>
           </div>
           <!-- CONVERSATION -->
-          <div v-if="activeContact !== -1" class="conversation">
+          <div v-if="activeContact !== -1" class="conversation d-flex">
 
             <div v-for="message in contacts[activeContact].messages">
               <div v-if="message.status === 'sent'" :class="{ 'sent': message.status === 'sent'}" class="my-3">{{message.message}}
