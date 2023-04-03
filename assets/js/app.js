@@ -180,6 +180,7 @@ createApp({
       console.log(index);
       this.activeContact = index;
       console.log("contatto attivo:", this.activeContact);
+      this.activeMessage.index = -1;
     },
     getLastMessage(messages) {
       const lastMessageIndex = messages.length - 1;
@@ -215,6 +216,9 @@ createApp({
       this.activeMessage.index = index
       this.activeMessage.active = !this.activeMessage.active
     },
+    deleteMessage(){
+
+    }
 
   },
 }).mount("#app");
