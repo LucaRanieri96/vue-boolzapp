@@ -5,6 +5,7 @@ createApp({
     return {
       activeContact: -1,
       search: "",
+      active: false,
       contacts: [
         {
           name: "Michele",
@@ -203,6 +204,9 @@ createApp({
       
       this.$refs.messageInput.value = "";
 
+    },
+    toggle () {
+      this.active = !this.active
     },
 
   },

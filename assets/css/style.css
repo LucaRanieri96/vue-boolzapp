@@ -137,6 +137,7 @@ img {
     padding: 1rem;
     box-shadow: 1px 1px 5px rgb(67, 67, 67);
     display: inline-block;
+    width: fit-content;
 }
 .sent {
     background-color: rgba(187, 254, 170, 0.904);
@@ -147,4 +148,13 @@ img {
     background-color: rgba(255, 255, 255, 0.904);
     margin-right: 50%;
     margin-left: 2rem;
+}
+
+.drop {
+    position: relative;
+}
+
+.dropdown {
+    position: absolute;
+    z-index: 2;
 }

@@ -89,9 +89,22 @@
           <div v-if="activeContact !== -1" class="conversation d-flex">
 
             <div v-for="message in contacts[activeContact].messages">
-              <div v-if="message.status === 'sent'" :class="{ 'sent': message.status === 'sent'}" class="my-3">{{message.message}}
+              <div v-if="message.status === 'sent'" :class="{ 'sent': message.status === 'sent'}" class="my-3 d-flex justify-content-between">
+               <div>{{message.message}}</div>
+               <i class="fa-solid fa-chevron-down ms-2 drop" @click="toggle"></i>
+                  <div v-if="active">
+                    <div class="dropdown card">delete</div>
+                  </div>
               </div>
-              <div v-else :class="{ 'received': message.status === 'received'}"  class="my-3">{{message.message}}</div>
+              <div v-else :class="{ 'received': message.status === 'received'}"  class="my-3 d-flex justify-content-between">
+                <div>{{message.message}}</div>
+                <div>
+                  <i class="fa-solid fa-chevron-down ms-2 drop" @click="toggle"></i>
+                  <div v-if="active">
+                    <div class="dropdown card">delete</div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <div v-else class="conversation"></div>
