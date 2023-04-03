@@ -4,9 +4,11 @@ createApp({
   data() {
     return {
       activeContact: -1,
-      activeMessage: -1,
+      activeMessage: {
+        active: false,
+        index : -1,
+      },
       search: "",
-      active: false,
       contacts: [
         {
           name: "Michele",
@@ -207,9 +209,11 @@ createApp({
 
     },
     toggle(index) {
-      console.log(index);
-      this.activeMessage = index;
-      console.log(this.activeMessage);
+      // console.log(index);
+      // this.activeMessage = index;
+      // console.log(this.activeMessage);
+      this.activeMessage.index = index
+      this.activeMessage.active = !this.activeMessage.active
     },
 
   },

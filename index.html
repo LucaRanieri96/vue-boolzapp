@@ -95,7 +95,7 @@
                 <div>{{message.message}}</div>
                 <i class="fa-solid fa-chevron-down ms-2 drop" @click="toggle(index)"></i>
                 <div>
-                  <div class="dropdown card" :class="(activeMessage === index) ? '' : 'hide' ">
+                  <div class="dropdown card" :class="(activeMessage.index === index && activeMessage.active) ? '' : 'hide' ">
                     <div class="delete">delete</div>
                   </div>
                 </div>
