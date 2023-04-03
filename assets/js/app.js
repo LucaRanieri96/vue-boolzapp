@@ -191,13 +191,15 @@ createApp({
         message: messageText,
         status: "sent"
       });
-
-      this.contacts[this.activeContact].messages.push({
-        date: Date(),
-        message: "Ok",
-        status: "received"
-      });
-
+      
+      setTimeout(() => {
+        this.contacts[this.activeContact].messages.push({
+          date: Date(),
+          message: "Ok",
+          status: "received"
+        });
+      }, 1000);
+      
       this.$refs.messageInput.value = "";
 
     },
