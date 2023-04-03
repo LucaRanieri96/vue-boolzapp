@@ -122,7 +122,8 @@ createApp({
             },
             {
               date: "10/01/2020 15:51:00",
-              message: "Peccato, aspettiamo dai, sarà questione di ore ormai :D",
+              message:
+                "Peccato, aspettiamo dai, sarà questione di ore ormai :D",
               status: "sent",
             },
           ],
@@ -170,19 +171,29 @@ createApp({
     };
   },
   methods: {
-    setActiveContact(index){
+    setActiveContact(index) {
       console.log(index);
       this.activeContact = index;
       console.log("contatto attivo:", this.activeContact);
     },
     getLastMessage(messages) {
       const lastMessageIndex = messages.length - 1;
-      return messages[lastMessageIndex].message
+      return messages[lastMessageIndex].message;
     },
-    getDate(messages){
-      const dateIndex = messages.length -1;
+    getDate(messages) {
+      const dateIndex = messages.length - 1;
       return messages[dateIndex].date;
-    }
+    },
+    sendMessage(){
+      const messageText = this.$refs.messageInput.value;
+
+      this.contacts[this.activeContact].messages.push({
+        date: new Date(),
+        message: messageText,
+        status: "sent"
+      });
+
+      this.$refs.messageInput.value = "";
+    },
   },
 }).mount("#app");
-

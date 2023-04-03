@@ -99,15 +99,15 @@
           <!-- TYPEBAR -->
           <div class="typebar py-2">
             <div class="row align-items-center justify-content-around">
-              <div class="col-2 text-center">
+              <div class="col-1 text-center">
                 <i class="fa-regular fa-face-smile"></i>
               </div>
-              <div class="col-8">
+              <div class="col-10">
                 <div class="input-group p-1">
-                  <input type="text" class="form-control" placeholder="cerca o inizia una nuova chat">
+                  <input type="text" class="form-control" placeholder="cerca o inizia una nuova chat" @keyup.enter="sendMessage" ref="messageInput">
                 </div>
               </div>
-              <div class="col-2 text-center">
+              <div class="col-1 text-center">
                 <i class="fa-solid fa-microphone"></i>
               </div>
             </div>

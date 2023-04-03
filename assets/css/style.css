@@ -26,6 +26,7 @@ p {
 
 .my_container {
     width: 90vw;
+    max-width: 1680px;
     height: 90vh;
     background-color: white;
     box-shadow: 0 0 10px rgb(51, 51, 51);
@@ -46,10 +47,10 @@ img {
     font-size: 26px;
     color: grey;
 }
-
+.typebar i:hover,
 .header i:hover {
     font-size: 32px;
-    color: rgb(68, 68, 68);
+    color: rgb(57, 57, 57);
     cursor: pointer;
 }
 
@@ -133,17 +134,18 @@ img {
 .sent {
     border-radius: 15px;
     padding: 1rem;
+    box-shadow: 1px 1px 5px rgb(67, 67, 67);
 }
 .sent {
     background-color: rgba(187, 254, 170, 0.904);
     width: fit-content;
-    margin-left: 40%;
+    margin-left: 80%;
     margin-right: 2rem;
     float: right;
 }
 .received {
     background-color: rgba(255, 255, 255, 0.904);
-    margin-right: 40%;
+    margin-right: 80%;
     width: fit-content;
     margin-left: 2rem;
     display: inline-block;
