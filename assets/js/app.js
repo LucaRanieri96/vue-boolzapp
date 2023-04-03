@@ -205,12 +205,13 @@ createApp({
       this.$refs.messageInput.value = "";
 
     },
-    toggle () {
-      this.active = !this.active
+    toggle(index) {
+      //this.active = !this.active
+      console.log(index);
     },
-    deleteMessage(){
-      
-    }
+    // deleteMessage(){
+
+    // }
 
   },
 }).mount("#app");
