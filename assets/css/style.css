@@ -157,4 +157,11 @@ img {
 .dropdown {
     position: absolute;
     z-index: 2;
+    padding: 1rem;
+    box-shadow: 1px 1px 5px rgb(67, 67, 67);
+    border-radius: 1rem;
+}
+
+.delete:hover {
+    cursor: pointer;
 }

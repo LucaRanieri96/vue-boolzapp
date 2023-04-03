@@ -208,6 +208,9 @@ createApp({
     toggle () {
       this.active = !this.active
     },
+    deleteMessage(){
+      
+    }
 
   },
 }).mount("#app");
