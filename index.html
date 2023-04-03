@@ -46,14 +46,14 @@
           <div class="bg_grey">
             <div class="input-group p-1">
               <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-magnifying-glass"></i></span>
-              <input type="text" class="form-control" placeholder="cerca o inizia una nuova chat">
+              <input type="text" class="form-control" placeholder="cerca o inizia una nuova chat" v-model="search">
             </div>
           </div>
           <!-- CHATS -->
           <div class="chats">
             <!-- CHAT -->
             <ul>
-              <li v-for="(contact, index) in contacts" @click="setActiveContact(index)">
+              <li v-for="(contact, index) in contacts" @click="setActiveContact(index)" v-show="contact.name.includes(search)">
                 <div class="chat p-2 d-flex align-items-center">
                   <img :src="contact.avatar" alt="contact.name">
                   <span class="ms-2">
@@ -104,7 +104,7 @@
               </div>
               <div class="col-10">
                 <div class="input-group p-1">
-                  <input type="text" class="form-control" placeholder="cerca o inizia una nuova chat" @keyup.enter="sendMessage" ref="messageInput">
+                  <input type="text" class="form-control" placeholder="Scrivi il tuo messaggio" @keyup.enter="sendMessage" ref="messageInput">
                 </div>
               </div>
               <div class="col-1 text-center">

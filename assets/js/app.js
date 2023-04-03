@@ -4,6 +4,7 @@ createApp({
   data() {
     return {
       activeContact: -1,
+      search: "",
       contacts: [
         {
           name: "Michele",
@@ -203,5 +204,6 @@ createApp({
       this.$refs.messageInput.value = "";
 
     },
+
   },
 }).mount("#app");
