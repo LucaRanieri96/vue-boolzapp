@@ -217,7 +217,9 @@ createApp({
       this.activeMessage.active = !this.activeMessage.active
     },
     deleteMessage(){
-
+      this.messages.splice({
+        
+      })
     }
 
   },

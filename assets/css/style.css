@@ -170,7 +170,7 @@ img {
     box-shadow: 1px 1px 5px rgb(67, 67, 67);
     border-radius: 1rem;
 }
-
+.conversation i:hover,
 .delete:hover {
     cursor: pointer;
     font-weight: 600;
