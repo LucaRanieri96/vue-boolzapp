@@ -181,6 +181,7 @@ img {
     padding: 1rem;
     box-shadow: 1px 1px 5px rgb(67, 67, 67);
     border-radius: 1rem;
+    z-index: 10;
 }
 .conversation i:hover,
 .delete:hover {
