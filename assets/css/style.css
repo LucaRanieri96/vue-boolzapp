@@ -1,11 +1,11 @@
 /* width */
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 5px;
   }
   
   /* Track */
   ::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: #cdcdcd;
   }
   
   /* Handle */
@@ -55,15 +55,17 @@
 .moon {
     position: absolute;
     top: 1rem;
-    right: 2rem;
+    right: 1rem;
     font-size: 40px;
     color: yellow;
+    z-index: 10;
 }
 
 body{
     height: 100vh;
     background: var(--body-bg);
     color: var(--text-color);
+    font-family: 'Roboto', sans-serif;
 }
 
 ul {
@@ -103,7 +105,7 @@ p {
 
 img {
     border-radius: 50%;
-    height: 90%;
+    height: 80%;
 }
 
 .header i {
@@ -161,7 +163,7 @@ img {
 }
 
 .chat {
-    height: 100px;
+    height: 130px;
     border-bottom: 1px solid rgb(237, 237, 237);
 }
 
@@ -170,6 +172,9 @@ img {
     background-color: var(--chat-hover);
 }
 
+#data {
+    font-size: 15px;
+}
 .active {
     background-color: var(--chat-hover);
     border: 2px solid black;
@@ -197,12 +202,11 @@ img {
 }
 .typebar i {
     font-size: 25px;
-    color: rgb(130, 130, 130);
 }
 
 .received,
 .sent {
-    min-width: 150px;
+    min-width: 190px;
     min-height: 80px;
     border-radius: 15px;
     padding: 1rem;
@@ -231,6 +235,7 @@ img {
     position: absolute;
     right: 5px;
     bottom: 5px;
+    font-size: 12px;
 }
 
 .hide {
