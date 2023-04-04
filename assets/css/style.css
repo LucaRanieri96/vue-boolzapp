@@ -139,11 +139,14 @@ img {
 
 .received,
 .sent {
+    min-width: 150px;
+    min-height: 80px;
     border-radius: 15px;
     padding: 1rem;
+    padding-right: 2rem;
     box-shadow: 1px 1px 5px rgb(67, 67, 67);
     display: inline-block;
-    width: fit-content;
+    position: relative;
 }
 .sent {
     background-color: rgba(187, 254, 170, 0.904);
@@ -152,12 +155,19 @@ img {
 }
 .received {
     background-color: rgba(255, 255, 255, 0.904);
-    margin-right: 50%;
+    float: left;
     margin-left: 2rem;
 }
 
 .drop {
-    position: relative;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+}
+#bottom_right {
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
 }
 
 .hide {
@@ -166,7 +176,6 @@ img {
 
 .dropdown {
     position: absolute;
-    z-index: 2;
     padding: 1rem;
     box-shadow: 1px 1px 5px rgb(67, 67, 67);
     border-radius: 1rem;
