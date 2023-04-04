@@ -57,12 +57,12 @@
                 v-show="contact.name.toLowerCase().includes(search)"
                 :class="(activeContact === index) ? 'active' : '' ">
                 <div class="chat p-2 d-flex align-items-center">
+
                   <img :src="contact.avatar" alt="contact.name">
                   <span class="ms-2">
                     <h4>{{contact.name}}</h4>
                     <p>{{getLastMessage(contact.messages)}}</p>
                   </span>
-                </div>
               </li>
             </ul>
           </div>
@@ -93,9 +93,12 @@
             <div v-for="(message, index) in contacts[activeContact].messages">
               <div :class="message.status" class="my-3 d-flex justify-content-between">
                 <div>{{message.message}}</div>
-                <i class="fa-solid fa-chevron-down ms-2 drop" @click="toggle(index)"></i>
                 <div>
-                  <div class="dropdown card" :class="(activeMessage.index === index && activeMessage.active) ? '' : 'hide' ">
+                  <i class="fa-solid fa-chevron-down ms-2 drop" @click="toggle(index)"></i>
+                </div>
+                <div>
+                  <div class="dropdown card"
+                    :class="(activeMessage.index === index && activeMessage.active) ? '' : 'hide' ">
                     <div class="delete" @click="deleteMessage(index)">Delete</div>
                     <div>Info</div>
                     <div></div>

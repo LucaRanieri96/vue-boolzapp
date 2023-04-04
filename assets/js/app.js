@@ -3,6 +3,7 @@ const { createApp } = Vue;
 createApp({
   data() {
     return {
+      date: this.getCurrentdate(),
       activeContact: -1,
       activeMessage: {
         active: false,
@@ -194,13 +195,14 @@ createApp({
       const messageText = this.$refs.messageInput.value;
 
       this.contacts[this.activeContact].messages.push({
+        date: this.date,
         message: messageText,
         status: "sent"
       });
       
       setTimeout(() => {
         this.contacts[this.activeContact].messages.push({
-          date: Date(),
+          date: this.date,
           message: "Ok",
           status: "received"
         });
@@ -219,5 +221,11 @@ createApp({
       this.contacts[this.activeContact].messages.splice(index, 1);
       this.activeMessage.active = !this.activeMessage.active;
     },
+    getCurrentdate() {
+      hours= new Date().getHours();
+      minutes= new Date().getMinutes().toString().padStart(2, "0");
+      date= `${hours}:${minutes}`;
+      return date;
+    }
   },
 }).mount("#app");
