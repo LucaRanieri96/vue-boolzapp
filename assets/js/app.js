@@ -232,9 +232,27 @@ createApp({
       const rootElement = document.querySelector(":root");
       this.darkMode = !this.darkMode;
       if (this.darkMode === false) {
+        rootElement.style.setProperty("--body-bg", "linear-gradient(to bottom, #009688 20%, #dddbd1 20%, #d2dbdc 100%)");
         rootElement.style.setProperty("--container-bg", "white");
+        rootElement.style.setProperty("--container-bs", "rgb(51, 51, 51)");
+        rootElement.style.setProperty("--headers-bg", "#e7e7e7");
+        rootElement.style.setProperty("--text-color", "#black");
+        rootElement.style.setProperty("--received-bg", "rgba(255, 255, 255, 0.904)");
+        rootElement.style.setProperty("--sent-bg", "rgba(187, 254, 170, 0.904)");
+        rootElement.style.setProperty("--banner", "#8edafc");
+        rootElement.style.setProperty("--typebar-color", "#f3eeea");
+        rootElement.style.setProperty("--chat-hover", "rgb(218, 218, 218)");
       } else {
+        rootElement.style.setProperty("--body-bg", "linear-gradient(to bottom, #191e2f 20%, #1b325b 20%, #1a1e31 100%)");
         rootElement.style.setProperty("--container-bg", "rgb(61, 66, 80)");
+        rootElement.style.setProperty("--container-bs", "rgb(171, 171, 171)");
+        rootElement.style.setProperty("--headers-bg", "#4b526b");
+        rootElement.style.setProperty("--text-color", "white");
+        rootElement.style.setProperty("--received-bg", "rgb(61, 66, 80)");
+        rootElement.style.setProperty("--sent-bg", "rgba(48, 82, 135, 0.904)")
+        rootElement.style.setProperty("--banner", "#1e7096");
+        rootElement.style.setProperty("--typebar-color", "#4b526b");
+        rootElement.style.setProperty("--chat-hover", "rgb(83, 101, 187)");
       }
     },
   },
