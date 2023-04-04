@@ -16,6 +16,12 @@
 <body>
 
   <div id="app" class="d-flex justify-content-center align-items-center my_wrapper">
+
+    <div @click="toggleDarkMode()" class="darkMode">
+      <i class="fa-solid fa-moon moon" v-if="darkMode === false"></i>
+      <i class="fa-solid fa-sun sun" v-else></i>
+    </div>
+
     <main class="my_container">
       <div class="row">
         <!-- LEFTAPP -->

@@ -1,6 +1,41 @@
+:root{
+    --body-bg: linear-gradient(to bottom, #009688 20%, #dddbd1 20%, #d2dbdc 100%);
+    --container-bg: white;
+    --container-bs: rgb(51, 51, 51);
+    --headers-bg: #e7e7e7;
+    --header-i: rgb(227, 227, 227);
+    --bg-grey: #f2f2f2;
+    --received-bg: rgba(255, 255, 255, 0.904);
+    --text-color: black;
+}
+
+:root.dark-theme{
+    --body-bg: linear-gradient(to bottom, #009688 20%, #dddbd1 20%, #d2dbdc 100%);
+    --container-bg: rgb(61, 66, 80);
+    --container-bs: rgb(171, 171, 171);
+    --headers-bg: #5d5d5d;
+    --header-i: rgb(148, 148, 148);
+    --bg-grey: #5e5e5e;
+    --received-bg: rgba(88, 88, 88, 0.904);
+    --text-color: white;
+}
+.darkMode:hover{
+    cursor: pointer;
+}
+
+.sun,
+.moon {
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    font-size: 40px;
+    color: yellow;
+}
+
 body{
     height: 100vh;
-    background: linear-gradient(to bottom, #009688 20%, #dddbd1 20%, #d2dbdc 100%);
+    background: var(--body-bg);
+    color: var(--text-color);
 }
 
 ul {
@@ -28,14 +63,14 @@ p {
     width: 90vw;
     max-width: 1680px;
     height: 90vh;
-    background-color: white;
-    box-shadow: 0 0 10px rgb(51, 51, 51);
+    background-color: var(--container-bg);
+    box-shadow: 0 0 10px var(--container-bs);
 }
 
 
 .header {
     height: 80px;
-    background-color: #ededed;
+    background-color: var(--headers-bg);
 }
 
 img {
@@ -45,7 +80,7 @@ img {
 
 .header i {
     font-size: 26px;
-    color: grey;
+    color: var(--headers-i);
 }
 .typebar i:hover,
 .header i:hover {
@@ -64,7 +99,7 @@ img {
 }
 
 #bellCover {
-    background-color: rgb(255, 255, 255);
+    background-color: white;
     border-radius: 50%;
     padding: 5px;
     width: 50px;
@@ -77,17 +112,17 @@ img {
 }
 
 #bellOption {
-    color: grey;
+    color: var(--header-i);
     text-decoration: underline;
 }
 #bellOption:hover {
-    color: grey;
+    color: var(--header-i);
     text-decoration: underline;
     cursor: pointer;
 }
 
 .bg_grey {
-    background-color: #f2f2f2;
+    background-color: var(--bg-grey);
     height: 45px;
 }
 
@@ -99,7 +134,7 @@ img {
 
 .chat {
     height: 100px;
-    border-bottom: 1px solid rgb(233, 233, 233);
+    border-bottom: 1px solid rgb(237, 237, 237);
 }
 
 .chat:hover {
@@ -154,7 +189,7 @@ img {
     float: right;
 }
 .received {
-    background-color: rgba(255, 255, 255, 0.904);
+    background-color: var(--received-bg);
     float: left;
     margin-left: 2rem;
 }
@@ -183,13 +218,14 @@ img {
     border-radius: 1rem;
     z-index: 10;
 }
+
 .conversation i:hover,
 .delete:hover {
     cursor: pointer;
     font-weight: 600;
 }
 .conversation .image{
-    background-color: rgba(92, 92, 92, 0.5);
+    background-color: rgba(102, 102, 102, 0.5);
     border-radius: 2rem;
     transition: all;
 }

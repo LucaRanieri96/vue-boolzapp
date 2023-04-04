@@ -3,6 +3,7 @@ const { createApp } = Vue;
 createApp({
   data() {
     return {
+      darkMode: false,
       date: this.getCurrentdate(),
       activeContact: -1,
       activeMessage: {
@@ -226,6 +227,15 @@ createApp({
       minutes= new Date().getMinutes().toString().padStart(2, "0");
       date= `${hours}:${minutes}`;
       return date;
-    }
+    },
+    toggleDarkMode() {
+      const rootElement = document.querySelector(":root");
+      this.darkMode = !this.darkMode;
+      if (this.darkMode === false) {
+        rootElement.style.setProperty("--container-bg", "white");
+      } else {
+        rootElement.style.setProperty("--container-bg", "rgb(61, 66, 80)");
+      }
+    },
   },
 }).mount("#app");
