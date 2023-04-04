@@ -192,8 +192,13 @@ createApp({
       const dateIndex = messages.length - 1;
       return messages[dateIndex].date;
     },
+
     sendMessage(){
       const messageText = this.$refs.messageInput.value;
+
+      if (messageText.trim() === "") {
+        return;
+      }
 
       this.contacts[this.activeContact].messages.push({
         date: this.date,
