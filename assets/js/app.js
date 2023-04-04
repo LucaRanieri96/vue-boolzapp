@@ -210,17 +210,13 @@ createApp({
 
     },
     toggle(index) {
-      // console.log(index);
-      // this.activeMessage = index;
-      // console.log(this.activeMessage);
       this.activeMessage.index = index
       this.activeMessage.active = !this.activeMessage.active
+      console.log(this.activeMessage.index);
+      console.log(index);
     },
-    deleteMessage(){
-      this.messages.splice({
-        
-      })
-    }
-
+    deleteMessage(index){
+      this.contacts[this.activeContact].messages.splice(index, 1)
+    },
   },
 }).mount("#app");

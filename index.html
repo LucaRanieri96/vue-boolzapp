@@ -96,7 +96,7 @@
                 <i class="fa-solid fa-chevron-down ms-2 drop" @click="toggle(index)"></i>
                 <div>
                   <div class="dropdown card" :class="(activeMessage.index === index && activeMessage.active) ? '' : 'hide' ">
-                    <div class="delete" @click="deleteMessage">delete</div>
+                    <div class="delete" @click="deleteMessage(index)">delete</div>
                   </div>
                 </div>
               </div>
