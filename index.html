@@ -96,13 +96,19 @@
                 <i class="fa-solid fa-chevron-down ms-2 drop" @click="toggle(index)"></i>
                 <div>
                   <div class="dropdown card" :class="(activeMessage.index === index && activeMessage.active) ? '' : 'hide' ">
-                    <div class="delete" @click="deleteMessage(index)">delete</div>
+                    <div class="delete" @click="deleteMessage(index)">Delete</div>
+                    <div>Info</div>
+                    <div></div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div v-else class="conversation"></div>
+          <div v-else class="conversation d-flex justify-content-center align-items-center">
+            <div class="image">
+              <img src="./assets/img/whatsapp-logo-png-2259.png" alt="">
+            </div>
+          </div>
 
           <!-- TYPEBAR -->
           <div class="typebar py-2">

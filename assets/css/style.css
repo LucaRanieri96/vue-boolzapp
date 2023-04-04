@@ -176,5 +176,22 @@ img {
     cursor: pointer;
     font-weight: 600;
 }
+.conversation .image{
+    background-color: rgba(92, 92, 92, 0.5);
+    border-radius: 2rem;
+    transition: all;
+}
+.image img{
+    width: 300px;
+    height: 200px;
+}
+
+.image img:hover{
+    cursor: pointer;
+}
+.conversation .image:hover{
+    background-color: rgba(92, 92, 92, 0.653);
+    transition-duration: 0.2s;
+}
 
 
